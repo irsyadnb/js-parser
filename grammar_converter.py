@@ -4,7 +4,7 @@ terminal = keyword.kwlist
 
 ruleDict = {}
 
-#Read txt
+#Read txt grammar file
 def readGrammarFile(file):
   with open(file) as cfg_file:
     baris = cfg_file.readlines()
@@ -14,17 +14,7 @@ def readGrammarFile(file):
       barisConverted.append(splitBaris)
   return barisConverted
 
-#Print read files
-def printGrammar(grammar):
-  for grammarRule in grammar:
-    for i in range(len(grammarRule)):
-      if i == 0:
-        print(grammarRule[i], " -> ", end='')
-      else:
-        print(grammarRule[i], end=' ')
-    print("\n")
-
-#Adding rule to global var
+#Adding rule to global var ruleDict
 def addGrammarRule(rule):
   global ruleDict
   
