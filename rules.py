@@ -24,6 +24,7 @@ lex_rule = [ #Identifier, Keyword
     (r'\]', "rsb"), #right square bracket
     (r'\{', "lcb"), #left curly bracket
     (r'\}', "rcb"), #right curly bracket
+    (r'\:', "colon"), 
     (r'-=', "subtreq"),
     (r'\*=', "muleq"),
     (r'\+=', "sumeq"),
@@ -37,7 +38,6 @@ lex_rule = [ #Identifier, Keyword
     (r'\w+[.]\w+', "dotbetween"),
     (r'\.', "dot"),
     (r'\%', "mod"),
-    (r'\:', "colon"),
     (r'\;', "semicolon"),
     (r'\&\&', "and"),
     (r'\|\|', "or"),
@@ -45,7 +45,6 @@ lex_rule = [ #Identifier, Keyword
     (r'\+\+', "increment"),
     (r'\-\-', "decrement"),
 
-    (r'\bfunction\b', "function"),
     (r'\blet\b', "let"),
     (r'\bconst\b', "const"),
     (r'\band\b', "and"),
@@ -53,6 +52,7 @@ lex_rule = [ #Identifier, Keyword
     (r'\bnot\b', "not"),
     (r'\btrue\b', "true"),
     (r'\bfalse\b', "false"),
+    (r'\bdelete\b', "delete"),
     (r'\bNone\b', "none"),
     (r'\bif\b', "if"),
     (r'\belse\b', "else"),
@@ -66,6 +66,7 @@ lex_rule = [ #Identifier, Keyword
     (r'\bcatch\b', "catch"),
     (r'\bfinally\b', "finally"),
     (r'\bswitch\b', "switch"),
+    (r'\bcase\b', "case"),
     (r'\bdefault\b', "default"),
 
     (r'[A-Za-z_][A-Za-z0-9_]*', "var"),
