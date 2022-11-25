@@ -24,7 +24,6 @@ lex_rule = [ #Identifier, Keyword
     (r'\]', "rsb"), #right square bracket
     (r'\{', "lcb"), #left curly bracket
     (r'\}', "rcb"), #right curly bracket
-    (r'\:', "colon"), 
     (r'-=', "subtreq"),
     (r'\*=', "muleq"),
     (r'\+=', "sumeq"),
