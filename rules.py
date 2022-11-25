@@ -1,4 +1,4 @@
-lex_rule = [ #Identifier, Keyword
+lex_rule = [ #Identifier, Keyword //
     (r'[ \t]+', None),
     (r'#[^\n]*', None),
     (r'[\n]+[ \t]*\'\'\'[(?!(\'\'\'))\w\W]*\'\'\'', None),

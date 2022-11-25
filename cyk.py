@@ -13,7 +13,7 @@ def cyk(token, cnf):
             for rhs in rule:
               if len(rhs) == 2 and rhs[0] in arr[i][k] and rhs[1] in arr[k + 1][j]:
                 arr[i][j].add(lhs)
-    
+    #
     if 'S' in arr[0][n-1]:
         print("Compiled Successfully :)")
     else:

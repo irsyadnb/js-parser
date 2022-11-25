@@ -1,7 +1,3 @@
-import keyword
-
-terminal = keyword.kwlist
-
 ruleDict = {}
 
 #Read txt grammar file
