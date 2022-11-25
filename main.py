@@ -3,7 +3,7 @@ from lexAnalysis import lexicalAnalysis
 from cyk import cyk
 import re, os, sys, argparse
 from rules import lex_rule
-
+import time
 
 def main():
   # Argparse, mengambil argument dari CLI
@@ -14,16 +14,16 @@ def main():
   # Proses parsing script JavaScript
   print()
   print("==========================JavaScript Parser==========================")
-  print("Loading...")
-  print("Checking your codes...")
-  print("File name: " + str(args.file.name))
+  print("Loading Your Code...")
+  time.sleep(2)
+#   print("File name: " + str(args.file.name))
   print()
   
   # Convert code dalam file script menjadi token 
   token = lexicalAnalysis(args.file.name,lex_rule)
-  print("Readed Token :")
+#   print("Readed Token :")
   print(token)
-  print()
+#   print()
 
   # Buat CNF berdasarkan grammar cfg yang telah dibuat
   CNFgrammar = mapGrammar(convertGrammar((readGrammarFile("cfg.txt"))))

@@ -31,6 +31,7 @@ lex_rule = [ #Identifier, Keyword
     (r'/=', "diveq"),
     (r'\+\+', "increment"),
     (r'\-\-', "decrement"),
+    (r'\*\*', "pow"),
     (r'\+', "add"),
     (r'\-', "subtr"),
     (r'\*', "mul"),
