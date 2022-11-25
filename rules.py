@@ -1,0 +1,66 @@
+lex_rule = [ #Identifier, Keyword
+    (r'[ \t]+', None),
+    (r'#[^\n]*', None),
+    (r'[\n]+[ \t]*\'\'\'[(?!(\'\'\'))\w\W]*\'\'\'', None),
+    (r'[\n]+[ \t]*\"\"\"[(?!(\"\"\"))\w\W]*\"\"\"', None),
+    (r'\n', "NEWLINE"),
+
+    (r'[\+\-]?[0-9]*\.[0-9]+', "NUMBERS"),
+    (r'[\+\-]?[1-9][0-9]+', "NUMBERS"),
+    (r'[\+\-]?[0-9]', "NUMBERS"),
+    (r'\"[^\"\n]*\"', "STRING"),
+    (r'\'[^\'\n]*\'', "STRING"),
+
+    (r'\=(?!\=)', "EQUAL"),
+    (r'\==', "ISEQ"),
+    (r'!=', "NEQ"),
+    (r'<=', "LE"),
+    (r'<', "L"),
+    (r'>=', "GE"),
+    (r'>', "G"),
+    (r'\(', "LP"), #left parenthesis
+    (r'\)', "RP"), #right parenthesis
+    (r'\[', "LSB"), #left square bracket
+    (r'\]', "RSB"), #right square bracket
+    (r'\{', "LCB"), #left curly bracket
+    (r'\}', "RCB"), #right curly bracket
+    (r'\:', "COLON"), 
+    (r'-=', "SUBTREQ"),
+    (r'\*=', "MULEQ"),
+    (r'\+=', "SUMEQ"),
+    (r'/=', "DIVEQ"),
+    (r'\->', "ARROW"),
+    (r'\+', "ADD"),
+    (r'\-', "SUBTR"),
+    (r'\*', "MUL"),
+    (r'/', "DIV"),
+    (r'\,', "COMMA"),
+    (r'\w+[.]\w+', "DOTBETWEEN"),
+    (r'\.', "DOT"),
+    (r'\%', "MOD"),
+    (r'\;', "SEMICOL"),
+
+    #(r'\blet\b', "LET"),
+    #(r'\bconst\b', "CONST"),
+    (r'\band\b', "AND"),
+    (r'\bor\b', "OR"),
+    (r'\bnot\b', "NOT"),
+    (r'\bTrue\b', "TRUE"),
+    (r'\bFalse\b', "FALSE"),
+    (r'\bNone\b', "NONE"),
+    (r'\bif\b', "IF"),
+    (r'\belse\b', "ELSE"),
+    (r'\bfor\b', "FOR"),
+    (r'\bin\b', "IN"),
+    (r'\bwhile\b', "WHILE"),
+    (r'\bbreak\b', "BREAK"),
+    (r'\bcontinue\b', "CONTINUE"),
+    (r'\breturn\b', "RETURN"),
+    (r'\btry\b', "TRY"),
+    (r'\bcatch\b', "CATCH"),
+    (r'\bfinally\b', "FINALLY"),
+    (r'\bswitch\b', "SWITCH"),
+    (r'\bdefault\b', "DEFAULT"),
+
+    (r'[A-Za-z_][A-Za-z0-9_]*', "VAR"),
+  ]
