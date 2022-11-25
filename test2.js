@@ -1,0 +1,1 @@
+if(x==5) throw "error";

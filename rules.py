@@ -29,6 +29,8 @@ lex_rule = [ #Identifier, Keyword
     (r'\+=', "sumeq"),
     (r'/=', "diveq"),
     (r'\->', "arrow"),
+    (r'\+\+', "increment"),
+    (r'\-\-', "decrement"),
     (r'\+', "add"),
     (r'\-', "subtr"),
     (r'\*', "mul"),
@@ -42,8 +44,6 @@ lex_rule = [ #Identifier, Keyword
     (r'\&\&', "and"),
     (r'\|\|', "or"),
     (r'\!', "not"),
-    (r'\+\+', "increment"),
-    (r'\-\-', "decrement"),
 
     (r'\bfunction\b', "function"),
     (r'\blet\b', "let"),
@@ -67,6 +67,7 @@ lex_rule = [ #Identifier, Keyword
     (r'\bfinally\b', "finally"),
     (r'\bswitch\b', "switch"),
     (r'\bdefault\b', "default"),
+    (r'\bthrow\b', "throw"),
 
     (r'[A-Za-z_][A-Za-z0-9_]*', "var"),
   ]
