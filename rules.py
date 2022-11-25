@@ -69,6 +69,7 @@ lex_rule = [ #Identifier, Keyword
     (r'\bthrow\b', "throw"),
     (r'\bnull\b', "null"),
     (r'\bvar\b', "varjs"),
+    (r'\bfunction\b', "function"),
 
     (r'[A-Za-z_][A-Za-z0-9_]*', "var"),
   ]
