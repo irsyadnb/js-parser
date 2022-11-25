@@ -1,6 +1,6 @@
 from grammar_converter import readGrammarFile, convertGrammar, mapGrammar
 from lexAnalysis import lexicalAnalysis
-from cyk import cykParse
+from cyk import cyk
 import re, os, sys, argparse
 from rules import lex_rule
 
@@ -28,7 +28,7 @@ def main():
   # Buat CNF berdasarkan grammar cfg yang telah dibuat
   CNFgrammar = mapGrammar(convertGrammar((readGrammarFile("cfg.txt"))))
   print("Result : ", end ="")
-  cykParse(token, CNFgrammar)
+  cyk(token, CNFgrammar)
   print("=====================================================================")
 
 if __name__ == "__main__":
