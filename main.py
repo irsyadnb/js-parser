@@ -13,23 +13,20 @@ def main():
 
   # Proses parsing script JavaScript
   print()
-  print("==========================JavaScript Parser==========================")
+  print("==============JavaScript Parser============")
   print("Loading Your Code...")
   time.sleep(2)
-#   print("File name: " + str(args.file.name))
   print()
   
   # Convert code dalam file script menjadi token 
   token = lexicalAnalysis(args.file.name,lex_rule)
-#   print("Readed Token :")
-  print(token)
-#   print()
+
 
   # Buat CNF berdasarkan grammar cfg yang telah dibuat
   CNFgrammar = mapGrammar(convertGrammar((readGrammarFile("cfg.txt"))))
   print("Result : ", end ="")
   cyk(token, CNFgrammar)
-  print("=====================================================================")
+  print("===========================================")
 
 if __name__ == "__main__":
   main()

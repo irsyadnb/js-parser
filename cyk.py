@@ -17,7 +17,5 @@ def cyk(token, cnf):
     if 'S' in arr[0][n-1]:
         print("Compiled Successfully :)")
     else:
-        print("Compile Failed :(")
+        print("Syntax Error :(")
       
-if __name__ == "__main__":
-  pass
