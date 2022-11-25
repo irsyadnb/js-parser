@@ -44,7 +44,3 @@ def lexicalAnalysis(file, lex_rule):
     output_file.close
     
     return tokenResult
-
-x = lexicalAnalysis("test.js", rule.lex_rule)
-x = [x for x in x]
-print(x)
