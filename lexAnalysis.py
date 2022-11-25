@@ -2,7 +2,7 @@ import os
 import sys 
 import re
 import rules as rule
-
+#
 def lexicalAnalysis(file, lex_rule):
     file = open(file, encoding="utf8")
     characters = file.read()

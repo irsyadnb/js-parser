@@ -6,7 +6,7 @@ from rules import lex_rule
 import time
 
 def main():
-  # Argparse, mengambil argument dari CLI
+  # Argparse, mengambil argument dari CLI //
   parser = argparse.ArgumentParser()
   parser.add_argument('file', type = argparse.FileType('r'))
   args = parser.parse_args()

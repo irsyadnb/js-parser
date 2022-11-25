@@ -1,1 +1,0 @@
-for lp let var equal numbers comma var l numbers semicolon var increment rp lcb newline while lp var l numbers rp lcb newline var increment semicolon newline rcb newline break semicolon newline rcb
